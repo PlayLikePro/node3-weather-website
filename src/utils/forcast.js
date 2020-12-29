@@ -9,7 +9,7 @@ const forcast = (latitude, longitude, callback) => {
             callback("something's wrong! " + resBody.error.info)
         } else {
             const data = resBody.current
-            callback(undefined, data.weather_descriptions[0] + '. It is currently ' + data.temperature + ' degrees out. It feels like ' + data.feelslike + ' degrees out.')
+            callback(undefined, data.weather_descriptions[0] + '. It is currently ' + data.temperature + ' degrees Fahrenheit out. It feels like ' + data.feelslike + ' degrees out.', data.weather_icons[0])
         }
     })
 }
